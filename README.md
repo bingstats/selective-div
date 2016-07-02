@@ -15,10 +15,25 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
     <div class="selective-div" data-group="group1" data-value="option3">Option #3</div>
     ```
     
-    Attribute | required/optional | explanation
+    Attribute | required/optional | description
     --------- | ----------------- | -----------
-    data-group | required | Groups multiple elements to behave like radio buttons
-    data-value | required | The selection's value
-    class | optional | You probably want to have your selective elements a look of being touchable 
+    *data-group* | required | Groups multiple elements to behave like radio buttons
+    *data-value* | required | The selection's value
+    *class* | optional | You probably want to have your selective elements a look of being touchable 
     
-4.
+4. Add *selective-div* functionality to your div elements by calling *$.selectiveDiv()* :
+    ```javaScript
+    <script type="text/javascript">
+    $(document).ready(function(){
+		$('.selective-div').selectiveDiv(); // <- activating selective-div on your DIV elements  
+		
+		$('.selective-div').click(function(){
+			var selectedValue = $(this).selection('group1'); // <- reading the current selection
+			$("#group1-selection").html(selectedValue);
+			
+		});
+		
+		var groups = $(".selective-div").groups(); // <- if you want to get all selective-div groups listed on your DIV 
+		$("#group-detection").html(formatArray(groups));
+	});
+	```
