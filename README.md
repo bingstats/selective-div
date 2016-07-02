@@ -25,16 +25,7 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
     ```javaScript
     <script type="text/javascript">
     $(document).ready(function(){
-		$('.selective-div').selectiveDiv(); // <- activating selective-div on your DIV elements  
-		
-		$('.selective-div').click(function(){
-			var selectedValue = $(this).selection('group1'); // <- reading the current selection
-			$("#group1-selection").html(selectedValue);
-			
-		});
-		
-		var groups = $(".selective-div").groups(); // <- if you want to get all selective-div groups listed on your DIV 
-		$("#group-detection").html(formatArray(groups));
+		$('.selective-div').selectiveDiv(); // <- activating selective-div on your DIV elements
 	});
 	```
 5. Add css style to the ```<head>``` section to make the selection visible:
@@ -55,4 +46,13 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
 </style>
     ```
     
-  selective-div adds the class ```selected``` on selected elements.
+  selective-div adds the class ```.selected``` on selected elements.
+  
+  6. To access the selected value call ```$(this).selection('group1')```:
+  ```javascript
+    $(".selective-div").click(function(){
+        var selectedValue = $(this).selection('group1');
+    });
+    ```
+    
+You find complete examples in ```demo``` directory
