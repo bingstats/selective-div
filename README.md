@@ -27,6 +27,7 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
     $(document).ready(function(){
 		$('.selective-div').selectiveDiv(); // <- activating selective-div on your DIV elements
 	});
+    </script>
 	```
 5. Add css style to the ```<head>``` section to make the selection visible:
     ```html
@@ -55,4 +56,4 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
     });
     ```
     
-You find complete examples in ```demo``` directory
+You can find complete examples in the ```demo``` directory
