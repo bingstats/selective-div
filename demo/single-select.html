@@ -1,0 +1,87 @@
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+			integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			crossorigin="anonymous"></script>
+	<script src="../dist/selective-div-plugin-1.0.0.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".selective-div").selectiveDiv();
+		
+		$(".selective-div").click(function(){
+			var selectedValue = $(this).selection('group1');
+			$("#group1-selection").html(selectedValue);
+			
+			var selectedValue = $(this).selection('group2');
+			$("#group2-selection").html(selectedValue);
+		});
+		
+		var groups = $(".selective-div").groups();
+		$("#group-detection").html(formatArray(groups));
+	});
+	
+	function formatArray(arr){
+		var formatted = '[ ';
+		$.each(arr, function(i, v){
+			formatted += ", "+v;
+		});
+		formatted = formatted.replace(", ", "");
+		formatted += " ]";
+		return formatted;
+	}
+	</script>
+<style type="text/css">
+	body{
+		font-family: arial, sans-serif;
+	}
+	.selective-div{
+		border:5px solid #999;
+		display:inline-block;
+		cursor:pointer;
+		width:100px;
+		height:100px;
+		margin:5px;
+	}
+	.selective-div.selected{
+		border: 5px solid #00ff00;
+		display:inline-block;
+	}
+</style>
+</head>
+<body>
+	
+	<h1>Selective DIV</h1>
+	
+	Group #1
+	<div class="selective-div" data-group="group1" data-value="option1">
+			Option #1
+	</div>
+	
+	<div class="selective-div" data-group="group1" data-value="option2">
+			Option #2		
+	</div>
+	
+	<div class="selective-div" data-group="group1" data-value="option3">
+			Option #3
+	</div>
+	Selected: <span id="group1-selection"></span>
+	
+	<br/>
+	Group #2
+	<div class="selective-div" data-group="group2" data-value="option1">
+			Option #1		
+	</div>
+	
+	<div class="selective-div" data-group="group2" data-value="option2">
+			Option #2	
+	</div>
+	
+	<div class="selective-div" data-group="group2" data-value="option3">
+			Option #3
+	</div>
+	Selected: <span id="group2-selection"></span>
+	
+	<p/>
+	List of groups within body: <span id="group-detection"></span>
+</body>
+</html>
