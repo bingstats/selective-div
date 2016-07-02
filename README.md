@@ -37,3 +37,22 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
 		$("#group-detection").html(formatArray(groups));
 	});
 	```
+5. Add css style to the ```<head>``` section to make the selection visible:
+    ```html
+    <style type="text/css">
+	.selective-div{
+		border:5px solid #999;
+		display:inline-block;
+		cursor:pointer;
+		width:100px;
+		height:100px;
+		margin:5px;
+	}
+	.selective-div.selected{
+		border: 5px solid #00ff00;
+		display:inline-block;
+	}
+</style>
+    ```
+    
+  selective-div adds the class ```selected``` on selected elements.
