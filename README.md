@@ -59,7 +59,7 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
     
     Here's the complete example code:
     ```
-    <html lang="en">
+<html lang="en">
     <head>
     <meta charset="UTF-8">
     <title>selectiv-div - example</title>
@@ -91,7 +91,7 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
         <div class="selective-div" data-group="group1" data-value="option2">Option #2</div>
         <div class="selective-div" data-group="group1" data-value="option3">Option #3</div>
     </body>
-    </html>
+</html>
     ```
     
 You can find enhanced examples in the ```demo``` directory
