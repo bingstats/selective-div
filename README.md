@@ -57,8 +57,8 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
     ```
     
     
-Here's the complete example code:
-    ```html
+    Here's the complete example code:
+    ```
     <html lang="en">
     <head>
     <meta charset="UTF-8">
