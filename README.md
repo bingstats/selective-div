@@ -56,4 +56,43 @@ jQuery plugin for having DIV elements bahaving like checkboxes or radio buttons
     });
     ```
     
-You can find complete examples in the ```demo``` directory
+    
+Here's the complete example code:
+
+    ```html
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    	<title>selectiv-div - example</title>
+    	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    	<script src="dist/selective-div-plugin-1.0.0.js"></script>
+    	<script type="text/javascript">
+    	
+    	$(document).ready(function(){
+    		$('.selective-div').selectiveDiv(); // <- activating selective-div on your DIV elements
+    	});
+    	</script>
+    	<style type="text/css">
+    	.selective-div{
+    		border:5px solid #999;
+    		display:inline-block;
+    		cursor:pointer;
+    		width:100px;
+    		height:100px;
+    		margin:5px;
+    	}
+    	.selective-div.selected{
+    		border: 5px solid #00ff00;
+    		display:inline-block;
+    	}
+    	</style>
+    </head>
+    <body>
+    	<div class="selective-div" data-group="group1" data-value="option1">Option #1</div>
+    	<div class="selective-div" data-group="group1" data-value="option2">Option #2</div>
+    	<div class="selective-div" data-group="group1" data-value="option3">Option #3</div>
+    </body>
+    </html>
+    ```
+    
+You can find enhanced examples in the ```demo``` directory
